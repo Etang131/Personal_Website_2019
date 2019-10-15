@@ -1,0 +1,319 @@
+/*
+Green Mountain: #3d7c47
+
+Blue Mountain: #09868b
+
+Light Blue Backdrop: #76c1d4
+
+Barely Gray Edge: #f7f7f7
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #3d7c47;
+}
+
+#container {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #76c1d4;
+}
+
+.logo {
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #76c1d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*General Headings*/
+h1,
+h2,
+h3 {
+  color: rgb(226, 226, 226);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+/*About Section*/
+h1 {
+  letter-spacing: 1.2px;
+  font-size: 3rem;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10%;
+  margin-top: 30px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  /*    background-color: #f7f7f7;  Might change later */
+}
+
+p {
+  color: rgb(226, 226, 226);
+  font-size: 1.125rem;
+}
+
+.about-pic {
+  width: 500px;
+  height: auto;
+  border: 1px #f7f7f7 solid;
+}
+
+/*Resume Section*/
+.resume-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.resume-section > a {
+  text-decoration: none;
+  color: rgb(226, 226, 226);
+  font-size: 1.125rem;
+}
+
+h2 {
+  margin-bottom: 35px;
+  margin-top: 25px;
+}
+.download-button {
+  background-color: #09868b;
+  padding: 15px 25px;
+  border-radius: 25px;
+}
+
+/*Projects section*/
+.personal-projects {
+  margin-top: 25px;
+  text-align: center;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "Banner Banner Banner" "Project-One Project-Two Project-Three" "Project-four Project-four Project-four";
+  grid-gap: 20px;
+}
+
+.Banner {
+  grid-area: Banner;
+}
+
+.Project-One {
+  grid-area: Project-One;
+}
+
+.Project-Two {
+  grid-area: Project-Two;
+}
+
+.Project-Three {
+  grid-area: Project-Three;
+}
+
+.Project-four {
+  grid-area: Project-four;
+}
+
+.personal-projects > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+/*Skills Section*/
+.Skills {
+  margin-top: 25px;
+  text-align: center;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 110px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.75rem;
+}
+
+ul > li {
+  list-style-type: none;
+  margin-bottom: 7px;
+  color: rgb(226, 226, 226);
+  font-size: 1.125rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+/*Footer */
+footer {
+  position: relative;
+  height: 100px;
+  margin-top: -100px;
+  clear: both;
+  padding-top: 15px; /* May get rid of this we will see*/
+  background-color: #09868b;
+  text-align: center;
+  color: rgb(226, 226, 226);
+}
+
+footer > a {
+  text-decoration: none;
+  color: rgb(226, 226, 226);
+}
+
+footer > a > i {
+  margin-top: 20px;
+  letter-spacing: 10px;
+}
+
+/*Model within footer for line and other social sites*/
+.bg-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contents {
+  height: 320px;
+  width: 500px;
+  background-color: #76c1d4;
+  text-align: center;
+  position: relative;
+  border-radius: 4px;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 42px;
+  color: #333;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
