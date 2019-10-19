@@ -266,6 +266,12 @@ ul > li {
   grid-gap: 20px;
 }
 
+.skillBlock {
+  border: black 2px solid;
+  padding-bottom: 20px;
+  background-color: #09868b;
+}
+
 /*Footer */
 footer {
   position: relative;
@@ -276,6 +282,7 @@ footer {
   background-color: #09868b;
   text-align: center;
   color: rgb(226, 226, 226);
+  border-top: 1px black solid;
 }
 
 footer > a {
