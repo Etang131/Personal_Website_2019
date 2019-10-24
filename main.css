@@ -213,6 +213,12 @@ h2 {
   grid-gap: 20px;
 }
 
+.personal-projects > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
 .Banner {
   grid-area: Banner;
 }
@@ -231,12 +237,6 @@ h2 {
 
 .Project-four {
   grid-area: Project-four;
-}
-
-.personal-projects > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #f7f7f7;
 }
 
 /*Skills Section*/
@@ -324,4 +324,98 @@ footer > a > i {
   color: #333;
   transform: rotate(45deg);
   cursor: pointer;
+}
+
+/*Media Queires*/
+
+/*Small Phone*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .about {
+    grid-template-columns: 1fr;
+    grid-gap: 10%;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    /*    background-color: #f7f7f7;  Might change later */
+  }
+
+  p {
+    color: rgb(226, 226, 226);
+    font-size: 1.125rem;
+  }
+
+  .about-pic {
+    width: 60%;
+    height: auto;
+  }
+
+  .about-me-text {
+    margin-bottom: 70px;
+  }
+
+  .personal-projects {
+    margin-top: 25px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "Banner" "Project-One" "Project-Two" "Project-Three" "Project-four";
+  }
+
+  .personal-projects > div {
+    padding-bottom: 25px;
+  }
+
+  .Banner {
+    grid-area: Banner;
+  }
+
+  .Project-One {
+    grid-area: Project-One;
+  }
+
+  .Project-Two {
+    grid-area: Project-Two;
+  }
+
+  .Project-Three {
+    grid-area: Project-Three;
+  }
+
+  .Project-four {
+    grid-area: Project-four;
+  }
+
+  .about-pic {
+    width: 175px;
+    height: auto;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skillBlock {
+    border: black 2px solid;
+  }
+
+  footer {
+    width: 100%;
+    height: 120px;
+  }
+
+  footer > a {
+    maring-bottom: 5px;
+  }
+}
+/*Large Phone / Small Tablet*/
+@media (min-width: 481px) and (max-width: 767px) {
+}
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*Laptop*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+/*Desktop*/
+@media (min-width: 1281px) {
 }
